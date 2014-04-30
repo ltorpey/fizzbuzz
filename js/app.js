@@ -4,15 +4,14 @@ $(document).ready(function() {
 		for( var i=1; i<=maxNumber; i++) {
 
 			var stringToAppend = i;
-			if( i % 3 === 0 ) {
-				stringToAppend = "fizz";
-			}
-			if( i % 5 === 0 ) {
-				stringToAppend = "buzz";
-			}
 			if( i % 3 === 0 && i % 5 === 0 ) {
 				stringToAppend = "fizz buzz";
+			} else if( i % 3 === 0 ) {
+				stringToAppend = "fizz";
+			} else if( i % 5 === 0 ) {
+				stringToAppend = "buzz";
 			}
+			
 			
 			if (i !== maxNumber) {
 				stringToAppend += ", ";
@@ -66,9 +65,6 @@ $(document).ready(function() {
 	if (isValidNum) {
 		doFizzBuzzCounting(maxNum);
 
-	}
-	else {
-			$('body').append("Stopping FizzBuzz.");
 	}
 
 });
